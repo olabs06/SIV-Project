@@ -3,7 +3,7 @@ import logo from "../assets/images/logo-SIV-transparent-background 1.svg"
 const Navbar = () => {
   return (
     // navbar
-    <nav className="bg-white w-full px-16 py-4 mb-4 border-b-2 border-black-lighter font-lato">
+    <nav className="bg-white w-full px-16 py-4 border-b-2 border-black-lighter font-lato">
 
       {/* wrapper */}
       <div className="flex flex-row container m-auto justify-between items-center px-8">
