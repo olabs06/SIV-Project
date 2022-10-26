@@ -22,6 +22,9 @@ module.exports = {
           light: `#0E0E0F`,
           lighter: `rgba(14, 14, 15, 0.2)`,
         },
+        ash: {
+          light: `#F3F3F3`,
+        },
       },
       height: {
         '0.5': '1px',
@@ -35,6 +38,12 @@ module.exports = {
       lineHeight: {
         '20': '60px',
         '14': '40px',
+      },
+      boxShadow: {
+        'input-shadow': '0px 90px 36px rgba(0, 0, 0, 0.01), 0px 50px 30px rgba(0, 0, 0, 0.05), 0px 22px 22px rgba(0, 0, 0, 0.09), 0px 6px 12px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)',
+        'google-shadow': '0px 62px 25px rgba(0, 0, 0, 0.01), 0px 35px 21px rgba(0, 0, 0, 0.05), 0px 15px 15px rgba(0, 0, 0, 0.09), 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)',
+        'apple-shadow': '0px 49px 20px rgba(0, 0, 0, 0.01), 0px 28px 17px rgba(0, 0, 0, 0.05), 0px 12px 12px rgba(0, 0, 0, 0.09), 0px 3px 7px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)',
+        'fb-shadow': '0px 49px 20px rgba(0, 0, 0, 0.01), 0px 28px 17px rgba(0, 0, 0, 0.05), 0px 12px 12px rgba(0, 0, 0, 0.09), 0px 3px 7px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)',
       },
     },
   },
