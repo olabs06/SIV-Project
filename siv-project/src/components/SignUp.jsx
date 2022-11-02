@@ -2,9 +2,33 @@ import facebookIcon from "../assets/images/facebook-icon.svg"
 import appleIcon from "../assets/images/apple-icon.svg"
 import googleIcon from "../assets/images/google-icon.svg"
 import Navbar from "./Navbar"
+import { Link } from "react-router-dom"
+import { useFormik } from "formik"
+import * as Yup from "yup"
 // import forwardArrowIcon from "../assets/images/forward-icon.svg"
 
 const SignUp = () => {
+
+    // const [password, setPassword] = useState("")
+    // const [email, setEmail] = useState("")
+
+
+    const formik = useFormik({
+        initialValues: {
+            email: "",
+            password: "",
+            confirmPassword: ""
+        },
+        validationSchema: Yup.object().shape({
+            email: Yup.string().email("Invalid email").required("Email is required"),
+            password: Yup.string("Invalid password string").required("Password is required"),
+            // confirmPassword: Yup.string().required("confirm your password").equals()
+        }),
+        onSubmit: (values) => {
+            console.log(values)
+        }
+    })
+
     return (
         <>
             <Navbar page="signup" />
@@ -32,7 +56,7 @@ const SignUp = () => {
                 <div className="my-3">
                     <button type="submit" className="googleBtn shadow-google-shadow">
                         <img src={googleIcon} alt="facebook Icon" className="h-6 w-6 mr-4" />
-                        <span className="opacity-50">continue with google</span>
+                        <span className="opacity-90">continue with google</span>
                     </button>
                 </div>
 
@@ -46,46 +70,39 @@ const SignUp = () => {
                 {/* inputs */}
                 <h3 className="text-lg text-black-light opacity-75 leading-8 self-center" >Sign up with your email address</h3>
 
-                <div class="w-82">
+                <div className="w-82">
                     <form className="bg-white py-4 w-full">
 
                         <div className="mb-3 px-2">
-                            <label className="block text-black-light opacity-75 leading-8 capitalize text-sm" for="email">
+                            <label className="block text-black-light opacity-90 leading-8 capitalize text-sm" htmlFor="email">
                                 Your email address
                             </label>
-                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-white opacity-50 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-light" id="email" name="email" type="email" placeholder="Enter your email" />
+                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-light opacity-90 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-500" id="email" name="email" type="email" placeholder="Enter your email" />
                         </div>
 
-                        {/* <div className="mb-3 px-2">
-                            <label className="block shadow-input-shadow text-black-light opacity-75 leading-8 capitalize text-sm" for="email">
-                                Email confirmation
-                            </label>
-                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-white opacity-50 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-light" id="email" name="email" type="email" placeholder="confirm your email" />
-                        </div> */}
-
                         <div className="mb-3 px-2">
-                            <label className="block text-black-light opacity-75 leading-8 capitalize text-sm" for="email">
+                            <label className="block text-black-light opacity-90 leading-8 capitalize text-sm" htmlFor="password">
                                 Create Password
                             </label>
-                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-white opacity-50 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-light" id="email" name="email" type="email" placeholder="Enter your password" />
+                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-light opacity-90 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-500" id="password" name="password" type="password" placeholder="Enter your password" />
                         </div>
 
                         <div className="mb-3 px-2">
-                            <label className="block text-black-light opacity-75 leading-8 capitalize text-sm" for="email">
+                            <label className="block text-black-light opacity-90 leading-8 capitalize text-sm" htmlFor="confirmPassword">
                                 Password Confirmation
                             </label>
-                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-white opacity-50 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-light" id="email" name="email" type="email" placeholder="Confirm your password" />
+                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-light opacity-90 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-500" id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your password" />
                         </div>
 
                         <div>
                             <h4 className="leading-5 text-sm  text-black-light opacity-75 mt-4">By clicking on signup, you agree to the Terms and Conditions of use</h4>
 
                             <div className="px-2 py-4 border-b-2 flex justify-center items-center">
-                                <button className="w-full capitalize px-4 rounded-full h-10 bg-gradient-to-r from-blue-light to-blue-dark text-white leading-10 self-center">signup</button>
+                                <button className="w-full capitalize px-4 rounded-full h-10 bg-gradient-to-r from-blue-light to-blue-dark text-white leading-10 self-center">sign up</button>
                             </div>
 
                             <div className="h-12 flex justify-center items-center">
-                                <h3 className="leading-14 text-black-light">Have an account?  <button className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-blue-light to-blue-dark">Log in</button></h3>
+                                <h3 className="leading-14 text-black-light">Have an account?  <Link to="/signin"><button className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-blue-light to-blue-dark">Sign in</button></Link></h3>
 
                             </div>
                         </div>

@@ -15,7 +15,3 @@
 .googleBtn {
     @apply w-82 h-12 bg-white rounded-full px-12 py-4 flex items-center leading-14 justify-center text-black-light uppercase
 }
-
-/* .signUpInput {
-    @apply shadow appearance-none border h-10 w-full py-2 px-8 text-black-white opacity-50 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-light
-} */

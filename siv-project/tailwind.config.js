@@ -10,7 +10,7 @@ module.exports = {
         '2': '2 2 0%'
       },
       backgroundImage: {
-        'banner': "url('./assets/images/banner.svg')",
+        'banner': "url('./assets/images/banner.png')",
         // 'footer-texture': "url('/img/footer-texture.png')",
       },
       fontFamily: {
@@ -58,6 +58,7 @@ module.exports = {
         '180': '45rem',
         '82': '25rem',
         '54': '54px',
+        '84': '72px',
         '874': '874px',
         '357': '357px',
         '518': '517px',

@@ -6,6 +6,7 @@ import SignIn from "./components/SignIn";
 import Home from "./components/Home";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Opportunities from './components/Opportunities';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         {/* Signin page */}
         <Route path="/signin" element={<SignIn />} />
+        {/* Opportunities */}
+        <Route path="/opportunities" element={<Opportunities />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
