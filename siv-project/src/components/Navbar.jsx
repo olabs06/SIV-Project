@@ -17,7 +17,7 @@ const Navbar = ({ page }) => {
         {/* options */}
         <ul className="items-center cursor-pointer flex justify-center text-blue-dark font-bold capitalize">
           <Link to="/opportunities"><li className="p-2 mr-4 leading-8 text-xl">opportunities</li></Link>
-          <li className="p-2 mr-4 leading-8 text-xl">volunteers</li>
+          <Link to="/volunteers"><li className="p-2 mr-4 leading-8 text-xl">volunteers</li></Link>
           <li className="p-2 mr-4 leading-8 text-xl">organizations</li>
           <li className="p-2 mr-4 leading-8 text-xl">about</li>
         </ul>

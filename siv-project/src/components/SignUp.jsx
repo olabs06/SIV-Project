@@ -17,7 +17,7 @@ const SignUp = () => {
         initialValues: {
             email: "",
             password: "",
-            confirmPassword: ""
+            // confirmPassword: ""
         },
         validationSchema: Yup.object().shape({
             email: Yup.string().email("Invalid email").required("Email is required"),
@@ -77,21 +77,24 @@ const SignUp = () => {
                             <label className="block text-black-light opacity-90 leading-8 capitalize text-sm" htmlFor="email">
                                 Your email address
                             </label>
-                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-light opacity-90 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-500" id="email" name="email" type="email" placeholder="Enter your email" />
+                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-light opacity-90 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-500" id="email" name="email" type="email" placeholder="Enter your email" onChange={formik.handleChange} onBlur={formik.handleBlur} />
+                            {formik.touched.email && formik.errors.email ? <p className="text-red-500 font-normal mt-1">{formik.errors.email}</p> : null}
                         </div>
 
                         <div className="mb-3 px-2">
                             <label className="block text-black-light opacity-90 leading-8 capitalize text-sm" htmlFor="password">
                                 Create Password
                             </label>
-                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-light opacity-90 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-500" id="password" name="password" type="password" placeholder="Enter your password" />
+                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-light opacity-90 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-500" id="password" name="password" type="password" placeholder="Enter your password" onChange={formik.handleChange} onBlur={formik.handleBlur} />
+                            {formik.touched.password && formik.errors.password ? <p className="text-red-500 font-normal mt-1">{formik.errors.password}</p> : null}
                         </div>
 
                         <div className="mb-3 px-2">
                             <label className="block text-black-light opacity-90 leading-8 capitalize text-sm" htmlFor="confirmPassword">
                                 Password Confirmation
                             </label>
-                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-light opacity-90 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-500" id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your password" />
+                            <input className="shadow appearance-none border h-10 w-full py-2 px-8 text-black-light opacity-90 leading-tight focus:outline-none rounded-full bg-blue-background placeholder-black-500" id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your password" onChange={formik.handleChange} onBlur={formik.handleBlur} />
+                            {formik.touched.password && formik.errors.password ? <p className="text-red-500 font-normal mt-1">{formik.errors.password}</p> : null}
                         </div>
 
                         <div>

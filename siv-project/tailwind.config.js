@@ -25,6 +25,9 @@ module.exports = {
         black: {
           light: `#0E0E0F`,
           500: `rgba(14, 14, 15, 0.5)`,
+          250: `rgba(14, 14, 15, 0.25)`,
+          5: `rgba(14, 14, 15, 0.05)`,
+          333: `#333333`,
           lighter: `rgba(14, 14, 15, 0.2)`,
         },
         borders: {
@@ -86,6 +89,7 @@ module.exports = {
         'google-shadow': '0px 62px 25px rgba(0, 0, 0, 0.01), 0px 35px 21px rgba(0, 0, 0, 0.05), 0px 15px 15px rgba(0, 0, 0, 0.09), 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)',
         'apple-shadow': '0px 49px 20px rgba(0, 0, 0, 0.01), 0px 28px 17px rgba(0, 0, 0, 0.05), 0px 12px 12px rgba(0, 0, 0, 0.09), 0px 3px 7px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)',
         'fb-shadow': '0px 49px 20px rgba(0, 0, 0, 0.01), 0px 28px 17px rgba(0, 0, 0, 0.05), 0px 12px 12px rgba(0, 0, 0, 0.09), 0px 3px 7px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)',
+        'shadow-113': '1px 1px 3px rgba(0, 0, 0, 0.25)',
       },
       spacing: {
         'neg-8': '-8px',
