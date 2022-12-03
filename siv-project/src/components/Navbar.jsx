@@ -19,7 +19,8 @@ const Navbar = ({ page }) => {
           <Link to="/opportunities"><li className="p-2 mr-4 leading-8 text-xl">opportunities</li></Link>
           <Link to="/volunteers"><li className="p-2 mr-4 leading-8 text-xl">volunteers</li></Link>
           <li className="p-2 mr-4 leading-8 text-xl">organizations</li>
-          <li className="p-2 mr-4 leading-8 text-xl">about</li>
+          <Link to="/about-us"><li className="p-2 mr-4 leading-8 text-xl">about</li></Link>
+
         </ul>
 
         {page === "home" && <div className="flex">

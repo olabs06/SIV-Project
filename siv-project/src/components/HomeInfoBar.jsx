@@ -1,5 +1,5 @@
 import { newsData } from "../lib/newsData"
-import newsImg from "../assets/images/newsImg.png"
+import newsImg from "../assets/images/landing/newsImg.png"
 const HomeInfoBar = () => {
     return (
         <section>

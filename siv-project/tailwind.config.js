@@ -10,7 +10,9 @@ module.exports = {
         '2': '2 2 0%'
       },
       backgroundImage: {
-        'banner': "url('./assets/images/banner.png')",
+        'banner': "url('./assets/images/landing/banner.png')",
+        'banner-aboutUs': "url('./assets/images/aboutUs/aboutUs_banner.png')",
+        'map-aboutUs': "url('./assets/images/aboutUs/aboutUs_world_map.png')"
         // 'footer-texture': "url('/img/footer-texture.png')",
       },
       fontFamily: {
@@ -19,11 +21,16 @@ module.exports = {
       colors: {
         blue: {
           dark: '#1F4490',
+          dark500: '#122B46',
           light: `#00A9E1`,
-          background: '#E7E7E7'
+          light200: '#EBF3F9',
+          light300: '#3E49D3',
+          light500: '#2E91CB',
+          background: '#E7E7E7',
         },
         black: {
-          light: `#0E0E0F`,
+          light: '#0E0E0F',
+          300: '#4D5C6D',
           500: `rgba(14, 14, 15, 0.5)`,
           250: `rgba(14, 14, 15, 0.25)`,
           5: `rgba(14, 14, 15, 0.05)`,

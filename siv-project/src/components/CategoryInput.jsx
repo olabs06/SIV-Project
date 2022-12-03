@@ -31,7 +31,7 @@ const CategoryInput = () => {
 
             <div className="mt-4 mb-4 flex flex-wrap px-2 text-black-light">
                 {categoriesData.map(category => (
-                    <button className="mr-4 leading-8">{category.name}</button>
+                    <button className="mr-4 leading-8" key={Math.random()*1000}>{category.name}</button>
                 ))}
             </div>
         </>

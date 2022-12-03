@@ -1,10 +1,10 @@
-import face1 from "../assets/images/face1.svg"
-import face2 from "../assets/images/face2.svg"
-import face3 from "../assets/images/face3.svg"
-import face4 from "../assets/images/face4.svg"
-import face5 from "../assets/images/face5.svg"
-import face6 from "../assets/images/face6.svg"
-import face7 from "../assets/images/face7.svg"
+import face1 from "../assets/images/landing/face1.svg"
+import face2 from "../assets/images/landing/face2.svg"
+import face3 from "../assets/images/landing/face3.svg"
+import face4 from "../assets/images/landing/face4.svg"
+import face5 from "../assets/images/landing/face5.svg"
+import face6 from "../assets/images/landing/face6.svg"
+import face7 from "../assets/images/landing/face7.svg"
 
 export const faces = [
     {src: face1, id: 1},
