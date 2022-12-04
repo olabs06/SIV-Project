@@ -1,0 +1,461 @@
+@media (min-width: 360px) {
+  /* Login */
+  .NavbarPlaceHolder {
+    height: 48px;
+    background-color: blue;
+  }
+
+  .AuthContainer {
+    width: 100%;
+    padding: 16px 12px;
+    /* background-color: red; */
+    height: 100vh;
+  }
+
+  .AuthLogoWrapper {
+    margin: 32px auto 16px auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .AuthWelcomeTxt {
+    margin: auto;
+    text-align: center;
+  }
+
+  .AuthSocialIconsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin: 8px 0;
+  }
+
+  .AuthSocialIconsWrapper > button {
+    margin-right: 12px;
+  }
+
+  .FbLogoRounded,
+  .AppleLogoRounded,
+  .GoogleLogoRounded {
+    /* #TODO: Change this */
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .AppleLogoRounded {
+    /* #TODO: Change this */
+    background-color: black;
+  }
+
+  .GoogleLogoRounded {
+    /* #TODO: Change this */
+    background-color: whitesmoke;
+  }
+
+  .FbLogoRounded > img,
+  .AppleLogoRounded > img,
+  .GoogleLogoRounded > img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+  }
+
+  .AuthOrContainer {
+    display: flex;
+    margin: 12px 0;
+    align-items: center;
+    justify-content: space-between;
+    width: 96%;
+  }
+
+  .AuthOrLeft,
+  .AuthOrRight {
+    height: 1px;
+    width: 44%;
+    background: black; /* #TODO: Change this */
+    display: inline-block;
+  }
+
+  .AuthOrLeft > span {
+    line-height: 32px;
+    color: black; /* #TODO: Change this */
+    text-align: center;
+  }
+
+  .AuthLabel,
+  .NewPassWordLabel {
+    display: block;
+    color: black; /* #TODO: Change this:  color: rgb(14 14 15 / var(--tw-text-opacity)); */
+    line-height: 24px;
+    text-transform: capitalize;
+    font-size: 12px;
+  }
+
+  /*  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); */
+  /* color: rgb(14 14 15 / var(--tw-text-opacity)); */
+  /* background-color: rgb(231 231 231 / var(--tw-bg-opacity)); */
+  .AuthInput {
+    appearance: none;
+    border-width: 1px;
+    height: 40px;
+    width: 100%;
+    padding: 8px 32px;
+    color: black; /* #TODO: Change this */
+    line-height: 1.25;
+    border-radius: 999px;
+  }
+
+  .AuthInput {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+  .AuthInputWrapper {
+    margin-bottom: 8px;
+  }
+
+  .AuthForgotPasswordWrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* color: background: #1F4490; */
+  .AuthForgotPassWord {
+    margin: 16px 4px 0 4px;
+    text-align: right;
+    color: #1f4490;
+    cursor: pointer;
+  }
+
+  /* color: rgb(14 14 15 / var(--tw-text-opacity)); */
+  .AuthLoginBtnWrapper {
+    margin-top: 16px;
+    line-height: 40px;
+    color: black; /* #TODO: Change this */
+    padding: 8px;
+    /* border-bottom-width: 2px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* background-image: linear-gradient(to right, var(--tw-gradient-stops)); */
+  /* --tw-gradient-from: #00A9E1;
+    --tw-gradient-to: rgb(0 169 225 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); */
+  /* --tw-gradient-to: #1F4490; */
+  .AuthLoginBtn {
+    width: 100%;
+    text-transform: capitalize;
+    padding: 0px 16px;
+    border-radius: 9999px;
+    height: 40px;
+    /* #TODO: Change these */
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    --tw-gradient-from: #00a9e1;
+    --tw-gradient-to: rgb(0 169 225 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-to: #1f4490;
+    color: white;
+    line-height: 40px;
+    align-self: center;
+  }
+
+  /* --tw-text-opacity: 1;
+    color: rgb(14 14 15 / var(--tw-text-opacity)); */
+  .AuthDontHaveAnAcct {
+    line-height: 32px;
+    /* #TODO: Change these */
+    --tw-text-opacity: 1;
+    color: rgb(14 14 15 / var(--tw-text-opacity));
+    margin-top: 8px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  /* background-image: linear-gradient(to right, var(--tw-gradient-stops)); */
+  /* --tw-gradient-from: #00A9E1;
+    --tw-gradient-to: rgb(0 169 225 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); */
+  /* --tw-gradient-to: #1F4490; */
+  .AuthSignUpOption {
+    font-size: 12px;
+    color: transparent;
+    background-clip: text;
+    /* #TODO: Change these */
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    --tw-gradient-from: #00a9e1;
+    --tw-gradient-to: rgb(0 169 225 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-to: #1f4490;
+  }
+
+  /* -------------------------------------------------------------------------------------------------------------- */
+
+  .VerifyEmailContainer,
+  .ForgotPassWordContainer {
+    padding: 32px 8px;
+  }
+
+  /* TODO: background: #f7f7f7 */
+  .VerifyEmailImgWrapper,
+  .ForgotPassWordImgWrapper {
+    margin: 32px auto 12px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* TODO: Change this */
+    background: #f7f7f7;
+    width: 208px;
+    height: 208px;
+    border-radius: 50%;
+  }
+
+  .VerifyEmailHeaderTxt,
+  .ForgotPassWordHeaderTxt {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .VerifyEmailParagraph,
+  .ForgotPassWordParagraph {
+    margin: 16px auto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  /*TODO: border: 2px solid #D8D8D8; */
+  .VerifyEmailInputContainer,
+  .ForgotPassWordInputContainer {
+    height: 60px;
+    width: 240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* TODO: Change this */
+    border: 2px solid #d8d8d8;
+    border-radius: 4px;
+  }
+
+  .ForgotPassWordInputContainer input:last-child,
+  .VerifyEmailInputContainer input:last-child {
+    border-right: none;
+  }
+
+  .VerifyEmailInput,
+  .ForgotPassWordInput {
+    width: 59px;
+    height: 100%;
+    text-align: center;
+    font-size: 32px;
+    border-right: 2px solid #d8d8d8;
+  }
+
+  .ForgotPassWordResendCodeWrapper,
+  .AuthModalBtnWrapper,
+  .SignInModalBtnWrapper,
+  .SignUpModalBtnWrapper {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+  }
+
+  /* color: #1F4490; */
+  .VerifyEmailResendCode,
+  .ForgotPassWordResendCode {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.017em;
+    text-align: center;
+    margin-top: 32px;
+    cursor: pointer;
+    align-self: center;
+    /* TODO: Change this */
+    color: #1f4490;
+  }
+
+  /* background: radial-gradient(
+      105.16% 105.16% at 100% 50.32%,
+      #1f4490 21.88%,
+      #00a9e1 73.92%
+    );
+    box-shadow: 0px 49px 20px rgba(0, 0, 0, 0.01),
+      0px 28px 17px rgba(0, 0, 0, 0.05), 0px 12px 12px rgba(0, 0, 0, 0.09),
+      0px 3px 7px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1); */
+  .VerifyEmailVerifyBtn,
+  .ForgotPassWordVerifyBtn,
+  .NewPassWordConfirmBtn,
+  .AuthModalBtn,
+  .SignInModalBtn,
+  .SignUpModalBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 196px;
+    margin: 32px auto;
+    padding: 8px;
+    /* TODO: Change this */
+    background: radial-gradient(
+      105.16% 105.16% at 100% 50.32%,
+      #1f4490 21.88%,
+      #00a9e1 73.92%
+    );
+    box-shadow: 0px 49px 20px rgba(0, 0, 0, 0.01),
+      0px 28px 17px rgba(0, 0, 0, 0.05), 0px 12px 12px rgba(0, 0, 0, 0.09),
+      0px 3px 7px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    color: white;
+    text-transform: capitalize;
+  }
+
+  .AuthModalBtn {
+    margin-bottom: 24px;
+  }
+
+  .NewPassWordConfirmBtn {
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+  }
+
+  /* ---------------------------------------------------------------------------------------------------------------- */
+
+  .NewPassWordContainer {
+    padding: 32px 8px;
+  }
+
+  .NewPassWordHeaderTxt {
+    margin: 32px 0 16px 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    /* text-align: left; */
+  }
+  .NewPassWordSecureAcct {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    /* text-align: left; */
+  }
+
+  /* -------------------------------------------------------------------------------------------------------- */
+  .NewPasswordWrapper {
+    margin: 32px 0px 16px 0px;
+  }
+
+  .NewPassWordWrapper {
+    padding: 8px 24px;
+  }
+
+  /* TODO: background: #e7e7e7;border: 0.45px solid rgba(14, 14, 15, 0.57)  */
+  .NewPassWordInput {
+    background: #e7e7e7;
+    border: 0.45px solid rgba(14, 14, 15, 0.57);
+    border-radius: 99999px;
+    width: 100%;
+    height: 43px;
+    padding: 8px 16px;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+.AuthModal,
+.SignInModal,
+.SignUpModal {
+  /* display: none; */
+  position: fixed;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  /* overflow: auto; */
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+}
+
+.AuthModalContent,
+.SignInModalContent,
+.SignUpModalContent {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #ddd;
+  margin: auto;
+  border-radius: 24px;
+  padding: 32px 16px;
+  border: 1px solid #888;
+  width: 80%;
+  /* box shadow */
+  /* animation */
+}
+
+/* color: #0E0E0F; */
+.AuthModalHeaderTxt,
+.SignInModalHeaderTxt,
+.SignUpModalHeaderTxt {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #0e0e0f;
+}
+
+/* TODO:  color: #1F4490; */
+
+.SignInModalHeaderTxt,
+.SignUpModalHeaderTxt {
+  color: #1f4490;
+  margin: 12px 0px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* color: #0E0E0F; */
+.AuthModalInfoTxt {
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #0e0e0f;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+.SignInRadiosWrapper,
+.SignUpRadiosWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.SignInLabel,
+.SignUpLabel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 4px auto;
+  font-size: 16px;
+  font-weight: bold;
+}
