@@ -1,66 +1,34 @@
-import "../Auth.module.css"
+import styles from "../Auth.module.css"
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
-export const SignInModal = () => {
+export const SignInModal = ({ updatePage }) => {
 
     const [showModal, setShowModal] = useState(true)
     const navigate = useNavigate()
 
     return (
         <>
-            <div className="SignIn__Modal" onClick={() => { setShowModal(false) }}>
+            {showModal && <div className={styles.AuthModal} onClick={() => setShowModal(false)}>
 
-                <div className="SignIn__ModalContent">
-                    <h3 className="SignIn__ModalHeaderTxt">Sign in as</h3>
-                    <div className="SignIn__RadiosWrapper">
-                        <label className="SignIn__Label">Volunteer <input type="radio" name="radio"></input> </label>
-                        <label className="SignIn__Label">Organization <input type="radio" name="radio"></input></label>
+                {/* <div className={styles.AuthModalOverlay}></div> */}
+
+                <div className={styles.AuthModalContent}>
+                    <h3 className={styles.AuthModalHeaderTxt}>sign in as</h3>
+
+
+                    <div className={styles.AuthModalBtnWrapper}>
+                        <div className={styles.SignInRadiosWrapper}>
+                            <label className={styles.SignInLabel}>Volunteer <input type="radio" name="volunteer" onClick={(evt) => { evt.preventDefault(); updatePage(2, true) }}></input> </label>
+                            <label className={styles.SignInLabel}>Organization <input type="radio" name="organization" onClick={(evt) => { evt.preventDefault(); console.log("clicked") }}></input></label>
+                        </div>
                     </div>
 
-                    <div className="SignIn__ModalBtnWrapper">
-                        <Link to="/login">
-                            <button className="SignIn__ModalBtn" type="submit" onClick={(evt) => {
-                                evt.preventDefault()
-                                setShowModal(false)
-                                navigate("/")
-                            }}>continue</button>
-                        </Link>
-
-                    </div>
                 </div>
 
-            </div>
+            </div>}
         </>
     )
 }
 
-export const SignUpModal = () => {
-
-    const [showModal, setShowModal] = useState(true)
-    const navigate = useNavigate()
-
-    return (
-        <>
-            <div className="SignUp__Modal" onClick={() => { setShowModal(false) }}>
-
-                <div className="SignUp__ModalContent">
-                    <h3 className="SignUp__ModalHeaderTxt">Sign up as</h3>
-                    <div className="SignUp__RadiosWrapper">
-                        <label className="SignUp__Label">Volunteer <input type="radio" name="radio"></input> </label>
-                        <label className="SignUp__Label">Organization <input type="radio" name="radio"></input></label>
-                    </div>
-
-                    <div className="SignUp__ModalBtnWrapper">
-                        <button className="SignUp__ModalBtn" type="submit" onClick={(evt) => {
-                            evt.preventDefault()
-                            setShowModal(false)
-                            navigate("/")
-                        }}>continue</button>
-                    </div>
-                </div>
-
-            </div>
-        </>
-    )
-}
+export default SignInModal

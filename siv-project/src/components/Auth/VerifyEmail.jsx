@@ -24,10 +24,10 @@ const VerifyEmail = ({ updatePage }) => {
 
             {/* code input */}
             <div className={styles.VerifyEmailInputContainer}>
-                <input type="number" className={styles.VerifyEmailInput} />
-                <input type="number" className={styles.VerifyEmailInput} />
-                <input type="number" className={styles.VerifyEmailInput} />
-                <input type="number" className={styles.VerifyEmailInput} />
+                <input type="text" className={styles.VerifyEmailInput} />
+                <input type="text" className={styles.VerifyEmailInput} />
+                <input type="text" className={styles.VerifyEmailInput} />
+                <input type="text" className={styles.VerifyEmailInput} />
             </div>
 
             <h3 className={styles.VerifyEmailResendCode}>Resend Code</h3>

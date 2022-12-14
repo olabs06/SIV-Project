@@ -23,7 +23,7 @@ const Modal = ({ updatePage }) => {
                     <p className={styles.AuthModalInfoTxt}>Your password has been changed successfully</p>
 
                     <div className={styles.AuthModalBtnWrapper}>
-                        <button className={styles.AuthModalBtn} type="submit" onClick={() => { updatePage(6, true); setShowModal(false); navigate("/") }}>ok</button>
+                        <button className={styles.AuthModalBtn} type="submit" onClick={() => { updatePage(6, false); setShowModal(false); navigate("/") }}>ok</button>
                     </div>
                 </div>
 

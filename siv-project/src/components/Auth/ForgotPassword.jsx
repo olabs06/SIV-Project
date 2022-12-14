@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from "./Auth.module.css"
 import verifyEmailImg from "../../assets/images/auth/verifyEmail.jpg"
-import { Link } from 'react-router-dom'
 
 const ForgotPassword = ({ updatePage }) => {
     return (
@@ -20,21 +19,18 @@ const ForgotPassword = ({ updatePage }) => {
             {/* verifyEmail text */}
             <h3 className={styles.ForgotPassWordHeaderTxt}>Forgot Password</h3>
             {/* placeholder email */}
-            <p className={styles.ForgotPassWordParagraph}>Enter the 4-digit code sent to osifuyeebunoluwa@gmail.com</p>
+            <p className={styles.ForgotPassWordParagraph}>Enter an e-mail to send the verification code</p>
 
             {/* code input */}
             <div className={styles.ForgotPassWordInputContainer}>
-                <input type="number" min="0" max="9" className={styles.ForgotPassWordInput} />
-                <input type="number" min="0" max="9" className={styles.ForgotPassWordInput} />
-                <input type="number" min="0" max="9" className={styles.ForgotPassWordInput} />
-                <input type="number" min="0" max="9" className={styles.ForgotPassWordInput} />
+                <input type="email" className={styles.ForgotPassWordEmailInput} />
             </div>
 
             <div className={styles.ForgotPassWordResendCodeWrapper}>
                 <button className={styles.ForgotPassWordResendCode}>Resend Code</button>
             </div >
 
-            <button type='submit' className={styles.ForgotPassWordVerifyBtn} onClick={() => updatePage(3, true)}>Verify</button>
+            <button type='submit' className={styles.ForgotPassWordVerifyBtn} onClick={() => updatePage(3, true)}>Send code</button>
 
             {/* resend code */}
         </section >

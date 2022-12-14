@@ -84,7 +84,7 @@ const Login = ({ updatePage }) => {
       </form >
 
       <div className={styles.AuthForgotPasswordWrapper}>
-        <span className={styles.AuthForgotPassWord} onClick={() => updatePage(2, true)}>Forgot password?</span>
+        <button className={styles.AuthForgotPassWord} onClick={(evt) => { evt.preventDefault(); updatePage(3, true) }}>Forgot password?</button>
       </div>
 
 
@@ -92,7 +92,7 @@ const Login = ({ updatePage }) => {
         < button className={styles.AuthLoginBtn} type="submit">log in</button>
       </div >
 
-      <h3 className={styles.AuthDontHaveAnAcct} >Don't have an account?  <Link to=" / signup"><button className={styles.AuthSignUpOption} > Sign up</button ></Link ></h3 >
+      <h3 className={styles.AuthDontHaveAnAcct} >Don't have an account?  <Link to="/signup"><button className={styles.AuthSignUpOption}>Sign up</button ></Link ></h3 >
 
     </div >
   )
