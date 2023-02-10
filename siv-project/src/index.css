@@ -1,17 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.facebookBtn {
-    @apply w-82 h-12 bg-blue-dark rounded-full leading-14 px-12 py-4 flex items-center justify-center text-white uppercase
-}
-
-.appleBtn {
-    @apply w-82 h-12 rounded-full  px-12 py-4 flex items-center justify-center bg-black-light text-white leading-14 uppercase
-}
-
-.googleBtn {
-    @apply w-82 h-12 bg-white rounded-full px-12 py-4 flex items-center leading-14 justify-center text-black-light uppercase
+* {
+    box-sizing: border-box;
+    font-family: "Lato";
 }

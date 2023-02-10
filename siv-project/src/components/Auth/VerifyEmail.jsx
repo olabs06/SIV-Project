@@ -1,40 +1,41 @@
-import React from 'react'
-import styles from "./Auth.module.css"
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import verifyEmailImg from "../../assets/images/auth/verifyEmail.jpg"
-import { Link } from 'react-router-dom'
+import styles from "./signup.module.css"
 
-const VerifyEmail = ({ updatePage }) => {
+const VerifyEmail = () => {
+
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        setTimeout(() => {
+            navigate("/signin");
+        }, 4000);
+    }, []);
+
+
     return (
-        <section className={styles.VerifyEmailContainer}>
+        <section className={styles.container}>
 
-            <div className={styles.NavbarPlaceHolder}>
+            {/* <div className={styles.NavbarPlaceHolder}>
                 Navbar
-            </div>
+            </div>  */}
 
             {/* verifyEmail image*/}
-            <div className={styles.VerifyEmailImgWrapper}>
+            <div className={styles.verifyImgWrapper}>
                 <img src={verifyEmailImg} alt="verify email icon" />
             </div>
 
 
             {/* verifyEmail text */}
-            <h3 className={styles.VerifyEmailHeaderTxt}>Verify Email</h3>
+            <h3 className={styles.verifyHeader}>Verify Email</h3>
+
             {/* placeholder email */}
-            <p className={styles.VerifyEmailParagraph}>Enter the 4-digit code sent to osifuyeebunoluwa@gmail.com</p>
+            <p className={styles.verifyParagraph}>A verification link has been sent to sent to <span>osifuyeebunoluwa@gmail.com</span></p>
+            <p className={styles.verifyParagraph}>Please check your email and follow the instructions to complete sign up</p>
 
-            {/* code input */}
-            <div className={styles.VerifyEmailInputContainer}>
-                <input type="text" className={styles.VerifyEmailInput} />
-                <input type="text" className={styles.VerifyEmailInput} />
-                <input type="text" className={styles.VerifyEmailInput} />
-                <input type="text" className={styles.VerifyEmailInput} />
-            </div>
+            {/* <p className={styles.verifyResendCode}>Resend Code</p> */}
 
-            <h3 className={styles.VerifyEmailResendCode}>Resend Code</h3>
-
-            <button type='submit' className={styles.VerifyEmailVerifyBtn} onClick={() => updatePage(4, true)}>Verify</button>
-
-            {/* resend code */}
         </section>
     )
 }

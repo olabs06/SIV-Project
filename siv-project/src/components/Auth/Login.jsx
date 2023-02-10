@@ -2,17 +2,14 @@ import facebookIcon from "../../assets/images/auth/facebook-icon.svg"
 import appleIcon from "../../assets/images/auth/apple-icon.svg"
 import googleIcon from "../../assets/images/auth/google-icon.svg"
 import logo from "../../assets/images/logo-SIV-transparent-background 1.svg"
-import { useState } from "react"
 
-// import Navbar from "./Navbar"
 import { useFormik } from "formik"
 import * as Yup from "yup"
-// import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
-import styles from "./Auth.module.css"
+import styles from "./signup.module.css"
 
-const Login = ({ updatePage }) => {
+const Login = () => {
 
   // const [email, setEmail] = useState("")
   // const [password, setPassword] = useState("")
@@ -31,68 +28,70 @@ const Login = ({ updatePage }) => {
     }
   })
 
+  const navigate = useNavigate()
+
+  const handleLogin = () => {
+    navigate("/")
+  }
+
   // console.log(formik.values)
 
   return (
-    <div className={styles.AuthContainer}>
-
-      <div className={styles.NavbarPlaceHolder}>
-        Navbar
-      </div>
+    <div className={styles.container}>
 
       {/* image logo */}
-      <div className={styles.AuthLogoWrapper}>
+      <div className={styles.logo}>
         <img src={logo} alt="logo" />
       </div>
 
-      <h3 className={styles.AuthWelcomeTxt}>Welcome back</h3>
-      <h4 className={styles.AuthWelcomeTxt}>Login</h4>
+      <h3 className={styles.welcomeText}>Welcome back</h3>
+      <h4 className={styles.signUpText}>Login</h4>
 
       {/* social icons */}
-      <div className={styles.AuthSocialIconsWrapper}>
-        <button className={`${styles.FbLogoRounded} shadow-fb-shadow`}><img src={facebookIcon} alt="fb icon" /></button>
-        <button className={`${styles.AppleLogoRounded} shadow-apple-shadow`}><img src={appleIcon} alt="apple icon" /></button>
-        <button className={`${styles.GoogleLogoRounded} shadow-google-shadow`}><img src={googleIcon} alt="google icon" /></button>
+      <div className={styles.socialWrapper}>
+        <button className={styles.FbLogoRounded}><img src={facebookIcon} alt="fb icon" /></button>
+        <button className={styles.AppleLogoRounded}><img src={appleIcon} alt="apple icon" /></button>
+        <button className={styles.GoogleLogoRounded}><img src={googleIcon} alt="google icon" /></button>
       </div>
 
       {/* or */}
-      <div className={styles.AuthOrContainer}>
-        < div className={styles.AuthOrLeft}></div>
-        <span className="text-black-light leading-8">OR</span>
-        < div className={styles.AuthOrRight}></div>
+      <div className={styles.orWrapper}>
+        < div className={styles.orLeft}></div>
+        <span className={styles.orText}>OR</span>
+        < div className={styles.orRight}></div>
       </div >
 
       {/* email and password login */}
       <form>
         {/* email address */}
-        < div className={styles.AuthInputWrapper}>
-          <label className={styles.AuthLabel} htmlFor="email">Email address or Username
+        < div className={styles.inputWrapper}>
+          <label className={styles.label} htmlFor="email">Email address
           </label>
-          <input className={`${styles.AuthInput} placeholder-black-500`} id="email" name="email" type="email" placeholder="Enter your email" onChange={formik.handleChange} value={formik.values.email} onBlur={formik.handleBlur} />
-          {formik.touched.email && formik.errors.email ? <p className="text-red-500 font-normal mt-1">{formik.errors.email}</p> : null}
+          <input className={styles.authInput} id="email" name="email" type="email" placeholder="Enter your email" onChange={formik.handleChange} value={formik.values.email} onBlur={formik.handleBlur} />
+          {formik.touched.email && formik.errors.email ? <p className={styles.error}>{formik.errors.email}</p> : null}
         </div >
 
         {/* password */}
-        <div>
-          <label className={styles.AuthLabel} htmlFor="password">
+        <div className={styles.inputWrapper}>
+          <label className={styles.label} htmlFor="password">
             Password
           </label >
-          <input className={`${styles.AuthInput} placeholder-black-500`} id="password" name="password" type="password" placeholder="Enter your password" value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} />
-          {formik.touched.password && formik.errors.password ? <p className="text-red-500 font-normal mt-1">{formik.errors.password}</p> : null}
+          <input className={styles.authInput} id="password" name="password" type="password" placeholder="Enter your password" value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} />
+          {formik.touched.password && formik.errors.password ? <p className={styles.error}>{formik.errors.password}</p> : null}
         </div>
 
       </form >
 
-      <div className={styles.AuthForgotPasswordWrapper}>
-        <button className={styles.AuthForgotPassWord} onClick={(evt) => { evt.preventDefault(); updatePage(3, true) }}>Forgot password?</button>
+      <div className={styles.forgotPasswordWrapper}>
+        <Link to="/forgot-password" className={styles.forgotPasswordBtn}>Forgot password?</Link>
       </div>
 
 
-      <div className={styles.AuthLoginBtnWrapper}>
-        < button className={styles.AuthLoginBtn} type="submit">log in</button>
+      <div className={styles.authLoginBtnWrapper}>
+        < button className={styles.authLoginBtn} type="submit" onClick={handleLogin}>log in<i className="material-icons">arrow_forward</i></button>
       </div >
 
-      <h3 className={styles.AuthDontHaveAnAcct} >Don't have an account?  <Link to="/signup"><button className={styles.AuthSignUpOption}>Sign up</button ></Link ></h3 >
+      <h3 className={styles.haveAnAcct} >Don't have an account?  <Link to="/signup"><button className={styles.loginOption}>Sign up</button ></Link ></h3 >
 
     </div >
   )
