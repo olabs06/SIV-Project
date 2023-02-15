@@ -1,0 +1,163 @@
+.container {
+  /* background-color: red; */
+  min-height: 100vh;
+  /* padding: 16px 0px; */
+  font-family: "Lato";
+  box-sizing: border-box !important;
+}
+
+.notificationsHeaderWrapper {
+  height: 20%;
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: yellow; */
+  margin: 24px 0px;
+  padding-left: 16px;
+  position: relative;
+  /* margin-bottom: 32px; */
+}
+
+.notificationsHeaderWrapper > i {
+  font-size: 16px;
+  color: #0e0e0f;
+  padding: 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  /* background: #e1e1e1; */
+  position: absolute;
+  left: 8px;
+  top: 30%;
+}
+
+.paragraph {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 60px;
+  letter-spacing: -0.017em;
+  color: #0e0e0f;
+  margin: 0px !important;
+}
+
+.notificationsHeaderWrapper > span {
+  font-weight: bold;
+  /* margin-right: 6px; */
+  font-size: 16px;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  /* background-color: green; */
+  justify-content: center;
+  position: absolute;
+  left: 16px;
+  top: -12px;
+}
+
+.midDivWrapper {
+  /* background-color: green; */
+  height: fit-content;
+  /* width: 100%; */
+  padding: 4px 12px;
+}
+
+.notificationsCard {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* background-color: green; */
+  align-items: center;
+  margin: auto;
+  align-self: center;
+}
+
+.logoWrapper {
+  width: 76px;
+  height: 62px;
+  background: #ffffff;
+  border: 2px solid #1f4490;
+  margin-right: 8px;
+  border-radius: 50% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
+}
+
+.logoWrapper > img {
+  width: 26px;
+  height: 26px;
+  object-fit: cover;
+}
+
+.infoWrapper {
+  width: 100%;
+  height: 64px;
+  /* background-color: orange; */
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;  
+  align-self: flex-start;
+  padding: 12px 4px;
+}
+
+.formativeText {
+  /* font-family: "Lato"; */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #0e0e0f;
+  margin: 0px !important;
+}
+
+.replyText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.017em;
+  color: #0e0e0f;
+  /* background-color: white; */
+  margin: 4px 0px !important;
+}
+
+.seeReplySpan {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.017em;
+  color: #1f4490;
+}
+
+.timeSpan {
+  position: absolute;
+  right: 6px;
+  /* top: 0px; */
+  /* background-color: white; */
+}
+
+.numMsgsSpan {
+  position: absolute;
+  right: 24px;
+  bottom: 16px;
+  width: 18px;
+  height: 18px;
+  background: #e10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 50%;
+  color: white;
+}
+
+.horizRule {
+  width: 90%;
+  margin: 4px auto 16px auto;
+}
+
+.bottomDiv {
+  background-color: red;
+  width: 100%;
+}

@@ -1,0 +1,141 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: red; */
+  font-family: "Lato";
+  box-sizing: border-box;
+}
+
+.profileImgWrapper {
+  height: 25%;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #0e0e0f;
+}
+
+.profileImgWrapper > div {
+  /* margin-top: 48px; */
+  width: 104px;
+  height: 104px;
+  /* background-color: blue; */
+  position: relative;
+}
+
+.profileImgBig {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.changeProfileIcon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(14, 14, 15, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 8px;
+  right: 0;
+  cursor: pointer;
+}
+
+.profileName {
+  /* line-height: 24px; */
+  font-weight: 700;
+  font-size: 16px;
+  /* background-color: #fff; */
+  margin: 4px auto !important;
+}
+
+.profileEmail {
+  height: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  /* background-color: aqua; */
+  margin: 2px auto !important;
+}
+
+.topDivWrapper {
+  height: 1px;
+  border: 1px solid rgba(14, 14, 15, 0.25);
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* --------------------- midDivWrapper -------------------- */
+.midDivWrapper {
+  height: 50%;
+  /* background-color: blue; */
+  padding: 16px 24px;
+}
+
+.midDivContent {
+  display: flex;
+  height: 14%;
+  /* background-color: yellow; */
+}
+
+.midDivContent > a {
+  text-decoration: none;
+  display: flex;
+}
+
+.midDivContentImg {
+  width: 28px;
+  height: 28px;
+  margin-right: 16px;
+  align-self: center;
+}
+
+.midDivContent  p {
+  /* font-family: 'Lato'; */
+  /* font-style: normal; */
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #0e0e0f;
+  text-transform: capitalize;
+}
+
+.bottomDiv {
+  height: fit-content;
+  /* background-color: aqua; */
+  padding: 16px 16px 0px 0px;
+  height: 25%;
+}
+
+.logoutBtn {
+  float: right;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+}
+
+.logoutBtn > img {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+.logoutBtn > a {
+  text-decoration: none;
+}
+
+.logoutBtn > a > span {
+  width: 64px;
+  height: 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #e10000;
+  text-transform: capitalize;
+}
