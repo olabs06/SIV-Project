@@ -437,6 +437,7 @@
 }
 
 .navItemLink {
+  font-family: "lato";
   margin: 4px 0px;
   /* background-color: aquamarine; */
   text-align: center;
@@ -699,6 +700,11 @@
   justify-content: center;
   align-items: center;
   /* background-color: red; */
+}
+
+.organisationDetailsWrapper {
+  text-decoration: none;
+  color: inherit;
 }
 
 .logoCard:nth-of-type(3) {

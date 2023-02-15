@@ -3,11 +3,16 @@ import styles from "./home.module.css"
 import logoPlaceHolder from "../../assets/images/cityList/logo_placeholder.png"
 import BottomNav from "./BottomNav"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 const OrganizationList = ({ fullPage }) => {
 
   const [country, setCountry] = useState(1)
+
+  // useEffect(() => {
+  //   fect
+  // })
 
   return (
     <>
@@ -47,18 +52,19 @@ const OrganizationList = ({ fullPage }) => {
         <div className={styles.cardCenterDiv}>
           {["1", "2", "3", "4", "5", "6", "7", "8", "9", "11", "22", "33", "44", "55", "66", "77", "88", "99", "12", "34", "56", "78", "90", "123", "456", "789", "1234", "5678", "12345", "67890", "123456", "5354646"
           ].map(item => {
-            return <div className={styles.logoCard} key={Math.random() * 1000000}>
-              <div className={styles.logoImgWrapper} style={{
-                backgroundImage: `url(${logoPlaceHolder})`,
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-              }}>
-              </div>
-              <p className={styles.logoName}>Formative footprint</p>
-              <p className={styles.logoLocation}>Europe, europe</p>
+            return <Link to="/organisation-details" className={styles.organisationDetailsWrapper}>
+              <div className={styles.logoCard} key={Math.random() * 1000000}>
+                <div className={styles.logoImgWrapper} style={{
+                  backgroundImage: `url(${logoPlaceHolder})`,
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover',
+                }}>
+                </div>
+                <p className={styles.logoName}>Formative footprint</p>
+                <p className={styles.logoLocation}>Europe, europe</p>
 
-            </div>
+              </div> </Link>
           }
           )}
           <BottomNav />

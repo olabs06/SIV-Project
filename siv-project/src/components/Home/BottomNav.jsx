@@ -1,24 +1,33 @@
 import React, { useState } from 'react'
+import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { PageContext } from '../../context/pageContext'
 import styles from "./home.module.css"
 
 
 const BottomNav = () => {
-    const [navItem, setNavItem] = useState(1)
     const navigate = useNavigate()
 
-    const goto = (page) => {
-        if (page) {
-            navigate(`/${page}`)
-        } else {
-            navigate(`/`)
-        }
+    const { updateNavItem, pageItem } = useContext(PageContext)
+    const [navItem, setNavItem] = useState(pageItem.number);
+
+    const updatePage = (pageItem) => {
+        let pageToGo = updateNavItem(pageItem)
+        if (pageToGo === 1) {
+            setNavItem(1)
+            navigate("/")
+        } else if (pageToGo === 2) {
+            setNavItem(2)
+            navigate("/organisations")
+        } else { setNavItem(3); navigate("/account") }
     }
 
     return (
         <div className={styles.bottomNavWrapper}>
             {/* home */}
-            <div className={styles.navItemWrapper} onClick={() => { setNavItem(1); goto() }} style={{
+            <div className={styles.navItemWrapper} onClick={() => {
+                updatePage(1)
+            }} style={{
                 color: navItem === 1 ? "#0052AC" : "#4A4A4B"
             }} >
                 <button style={{
@@ -31,7 +40,9 @@ const BottomNav = () => {
                 }}>Home</p>
             </div>
             {/* organizations */}
-            <div className={styles.navItemWrapper} onClick={() => { setNavItem(2); goto("organisations") }} style={{
+            <div className={styles.navItemWrapper} onClick={() => {
+                updatePage(2)
+            }} style={{
                 color: navItem === 2 ? "#0052AC" : "#4A4A4B"
             }} >
                 <button style={{
@@ -39,7 +50,9 @@ const BottomNav = () => {
                 }} className={styles.navItemBtn}>
                     <span className="material-icons">workspaces</span>
                 </button>
-                <p className={styles.navItemLink}>organizations</p>
+                <p className={styles.navItemLink} style={{
+                    color: navItem === 2 ? "#0052AC" : "#4A4A4B"
+                }}>organizations</p>
             </div>
             {/* groups */}
             {/* <div>
@@ -50,7 +63,9 @@ const BottomNav = () => {
             </div> */}
             {/* account */}
 
-            <div className={styles.navItemWrapper} onClick={() => { setNavItem(3); goto("account") }} style={{
+            <div className={styles.navItemWrapper} onClick={() => {
+                updatePage(3)
+            }} style={{
                 color: navItem === 3 ? "#0052AC" : "#4A4A4B"
             }} >
                 <button style={{
